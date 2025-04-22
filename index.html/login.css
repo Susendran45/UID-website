@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.bg-container {
+    width: 65%;
+    background: url("electrohub1.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.form-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5372F0;
+}
+
+.wrapper {
+    width: 450px;
+    height: 600px;
+    padding: 50px 50px 60px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper header {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+form .field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-area {
+    position: relative;
+}
+
+form input {
+    width: 100%;
+    height: 55px;
+    padding: 0 20px;
+    font-size: 18px;
+    border: 1px solid #bfbfbf;
+    border-radius: 8px;
+    outline: none;
+}
+
+.error input {
+    border-color: #dc3545;
+}
+
+.error-txt {
+    color: #dc3545;
+    text-align: left;
+    margin-top: 8px;
+    font-size: 14px;
+    display: none;
+}
+
+.error .error-txt {
+    display: block;
+}
+
+form input[type="submit"] {
+    background: #5372F0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    height: 55px;
+    transition: 0.3s;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover {
+    background: #2c52ed;
+}
+
+form input[type="submit"]:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+input[type="password"]::-webkit-reveal,
+input[type="password"]::-webkit-caps-lock-indicator,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-strong-password-auto-fill-button {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+input[type="password"]::-moz-reveal-password {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0;
+    height: 0;
+}
+
+input[type="password"] {
+    -webkit-text-security: disc;
+    text-security: disc;
+}
+
+@media (max-width: 1200px) {
+    .bg-container {
+        width: 60%;
+    }
+    .form-container {
+        width: 40%;
+    }
+    .wrapper {
+        width: 400px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    .bg-container {
+        width: 100%;
+        height: 40vh;
+        min-height: 300px;
+    }
+    .form-container {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    .wrapper {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        padding: 40px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 30px 25px;
+    }
+    .wrapper header {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+    form input {
+        height: 50px;
+        font-size: 16px;
+    }
+    form input[type="submit"] {
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 25px 20px;
+    }
+    .wrapper header {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    form .field {
+        margin-bottom: 15px;
+    }
+    .error-txt {
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    body {
+        flex-direction: row;
+    }
+    .bg-container {
+        width: 50%;
+        height: 100vh;
+    }
+    .form-container {
+        width: 50%;
+        height: 100vh;
+        padding: 20px;
+    }
+    .wrapper {
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+    }
+}

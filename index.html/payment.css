@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.payment-wrapper {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.payment-section {
+    padding: 30px;
+}
+
+.title {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+
+.inputBox {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.inputBox label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.inputBox input,
+.inputBox select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.inputBox input:focus,
+.inputBox select:focus {
+    border-color: #ddd;
+}
+
+.flex {
+    display: flex;
+    gap: 15px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #45a049;
+}
+
+.qr-container {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid white;
+    margin-top: 20px;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border: 1px solid #eee;
+}
+
+.success-message {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 20px;
+    display: none;
+}
+
+.error-txt {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.inputBox.error input,
+.inputBox.error select {
+    border-color: #dc3545;
+}
+
+.inputBox.error .error-txt {
+    display: block;
+}
+
+.submit-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 992px) {
+    .payment-wrapper {
+        max-width: 800px;
+    }
+    .payment-section {
+        padding: 25px;
+    }
+    .title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    .payment-section {
+        padding: 20px;
+    }
+    .flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .qr-code {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .payment-section {
+        padding: 15px;
+    }
+    .title {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .inputBox {
+        margin-bottom: 15px;
+    }
+    .inputBox input,
+    .inputBox select {
+        padding: 10px;
+        font-size: 15px;
+    }
+    .submit-btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+    .qr-code {
+        width: 160px;
+        height: 160px;
+    }
+    .error-txt {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+    .payment-section {
+        padding: 12px;
+    }
+    .title {
+        font-size: 16px;
+    }
+    .inputBox label {
+        font-size: 14px;
+    }
+    .qr-code {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        padding: 10px;
+        min-height: auto;
+    }
+    .payment-wrapper {
+        max-width: 600px;
+    }
+    .flex {
+        flex-direction: row;
+    }
+}
